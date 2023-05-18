@@ -1,3 +1,16 @@
+header {
+    height: 5vh;
+    background-color: aqua;
+}
+
+footer {
+    height: 5vh;
+    background-color: aqua;
+}
+
+.mainh {
+    height: 90vh;
+}
 .player1 {
     background-color: blueviolet;
     text-align: center;
@@ -7,3 +20,29 @@
     background-color: brown;
     text-align: center;
 }
+
+.cmdh {
+    position: absolute;
+    display: grid;
+    align-content: space-evenly;
+    background-color:transparent;
+    text-align: center;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cmdw {
+    position: absolute;
+    background-color:beige;
+   justify-content: center;
+    top: 50%; left: 50%;
+    transform: translate(-43%, -50%);
+}
+
+.overbtn {
+    background-color: transparent;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
