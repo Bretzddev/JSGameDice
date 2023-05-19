@@ -7,13 +7,13 @@ form {
     margin-top: 20px;
 }
 
+h2 {
+    padding: 30px;
+}
+
 footer {
     height: 5vh;
     background-color: aqua;
-}
-
-.form-control{
-    width: 300px;
 }
 
 .mainh {
@@ -29,6 +29,9 @@ footer {
     background-color: brown;
     text-align: center;
 }
+
+
+
 
 .cmdh {
     position: absolute;
