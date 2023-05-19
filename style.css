@@ -3,14 +3,23 @@ header {
     background-color: aqua;
 }
 
+form {
+    margin-top: 20px;
+}
+
 footer {
     height: 5vh;
     background-color: aqua;
 }
 
+.form-control{
+    width: 300px;
+}
+
 .mainh {
     height: 90vh;
 }
+
 .player1 {
     background-color: blueviolet;
     text-align: center;
