@@ -9,6 +9,7 @@ form {
 
 h2 {
     padding: 30px;
+    font-size: 40px;
 }
 
 footer {
@@ -30,7 +31,29 @@ footer {
     text-align: center;
 }
 
+.score{
+    font-size: 96px;
+    margin-top: 20px;
+}
 
+.colScore{
+    align-content: space-evenly;
+}
+
+.currentScore{
+    width: 175px;
+    height: 150px;
+    background-color: azure;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.curScore{
+    font-size: 48px;
+}
 
 
 .cmdh {
