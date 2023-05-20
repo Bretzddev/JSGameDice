@@ -21,14 +21,15 @@ footer {
     height: 90vh;
 }
 
-.player1 {
-    background-color: blueviolet;
+.player {
+    background-color: burlywood;
     text-align: center;
 }
 
-.player2 {
-    background-color: brown;
-    text-align: center;
+.active {
+    border: 20px solid;
+    border-color: brown;
+    
 }
 
 .score{
@@ -55,6 +56,10 @@ footer {
     font-size: 48px;
 }
 
+.affde {
+    width: 100px;
+    height: 100px;
+}
 
 .cmdh {
     position: absolute;
