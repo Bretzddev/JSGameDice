@@ -11,20 +11,24 @@
 </head>
 <body>
     <header class="container-sm"> 
-
+        <div class="row">
+            <div class="col-9"><h1>Jeu de dés pour 2 joueurs</h1></div>
+            <div class="col-3"><button onclick="regles()" type="button"> Règles du jeu </button> </div>
+        </div> 
     </header>
     <main class="container-sm">
         <div class="row row-cols-1 row-cols-md-2 mainh">
             <div id="player1" class="player col">
-                <form id="formName1" name="pn1" action="">
-                    <label for="pn1">Votre prénom :</label>
-                    <input id="name1" name="pn1" type="text" placeholder="Joueur1" >
-                    <button name="pn1" onclick="name1()" type="button"> Valider </button> 
-                </form>
+                <div class="row">
+                    <form id="formName1" name="pn1" action="">
+                        <input id="name1" name="pn1" type="text" placeholder="Votre prénom" >
+                        <button name="pn1" onclick="name1()" type="button"> Valider </button> 
+                    </form>
+                </div>
                 <h2 id="nom1"> Joueur1 </h2>
             <div id="ligne1" class="row-cols-1" >
                 <div class="score">
-                    <p id="score1" class="score"> 40 </p>
+                    <p id="score1" class="score"> 0 </p>
                 </div>
                 <div class="currentScore">
                     <p>Score du tour</p>
@@ -33,15 +37,16 @@
             </div>  
             </div>
             <div id="player2" class="player col">
-                <form id="formName2" name="name2" action="" >
-                    <label for="pn2">Votre prénom :</label>
-                    <input id="name2" name="pn2" type="text" placeholder="Joueur2" onkeypress="">
-                    <button name="pn2" onclick="name2()" type="button"> Valider </button> 
-                </form>
+                <div class="row">
+                    <form id="formName2" name="name2" action="" >
+                        <input id="name2" name="pn2" type="text" placeholder="Votre prénom" onkeypress="">
+                        <button name="pn2" onclick="name2()" type="button"> Valider </button> 
+                    </form>
+                </div>
                 <h2 id="nom2"> Joueur2 </h2>
                 <div id="ligne2" class="row-cols-1" >
                     <div class="score">
-                        <p id="score2" class="score"> 40 </p>
+                        <p id="score2" class="score"> 0 </p>
                     </div>
                     <div class="currentScore">
                         <p>Score du tour</p>
@@ -50,10 +55,10 @@
                 </div>  
             </div>
             <div class="cmdh vh-100" >
-                <div> <button class="overbtn" onclick="newGame()" type="button"> Nouveau Jeu </button> </div>
+                <div> <button class="overbtn" onclick="newGame()" type="button"> <img src="Images/plus.png" width="30" height="30"> <br> Nouveau Jeu </button> </div>
                 <div> <img id="imgDe" alt="dé" src="Images/dice1.png" class="affde">  </img> </div>
-                <div> <button class="overbtn" onclick="rollDice()" type="button"> Lancer le dé </button> </div>
-                <div> <button class="overbtn" onclick="addScore()" type="button"> Ajouter à mon score </button> </div>
+                <div> <button class="overbtn" onclick="rollDice()" type="button"> <img src="Images/refresh.png" width="30" height="30"> <br> Lancer le dé </button> </div>
+                <div> <button class="overbtn" onclick="addScore()" type="button"> <img src="Images/down.png" width="30" height="30"> <br> Ajouter au score </button> </div>
             </div>
         </div>
     </main>
