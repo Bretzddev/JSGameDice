@@ -15,9 +15,20 @@ let pScore1 = 0
 let pScore2 = 0
 let activePlayer
 
-function name1() {
-    nomJ1.innerText = nameJ1.value;
+
+function regles() {
+    alert(
+       " Règles du jeu : "
+    )
 }
+
+
+
+
+function name1() {
+    else {nomJ1.innerText = nameJ1.value}
+}
+
 function name2() {
     nomJ2.innerText = nameJ2.value;
 }
