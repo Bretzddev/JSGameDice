@@ -17,16 +17,23 @@ let activePlayer
 
 
 function regles() {
-    alert(
-       " Règles du jeu : "
-    )
+    var msg = ` Règles du jeu :
+
+   1. Le joueur actif peut faire deux choix : lancer le dé ou enregister ses points. 
+
+   2. Lors de chaque lancé, si le dé affiche un 1, le score du tour du joueur actif est remis à 0 et la main passe à l'adversaire.
+
+   3. Tant que le dé n'affiche pas de 1 le joueur peut lancer le dé autant de fois qu'il le souhaite. Il augmente ainsi son score du tour. 
+
+   4. Lorsque le joueur décide d'enregistrer ses points, le score du tour est tranféré dans le score total. Le score du tour est alors remis à 0 et la main passe à l'adversaire.
+
+   5. Le joueur qui gagne est celui qui arrive à enregister 100 points dans son score total.
+    `
+    alert(msg)
 }
 
-
-
-
 function name1() {
-    else {nomJ1.innerText = nameJ1.value}
+    nomJ1.innerText = nameJ1.value
 }
 
 function name2() {
@@ -68,7 +75,9 @@ function rollDice() {
     imgDice(nbreDice);
     if (player1.getAttribute('class')==='player col active') {
         if (nbreDice === 1) {changePlayer2()} else { cScore1 += nbreDice ; curScore1.innerText = cScore1}} 
-    else { if (nbreDice === 1) {changePlayer1()} else { cScore2 += nbreDice; curScore2.innerText = cScore2}}
+    else if (player2.getAttribute('class')==='player col active') { 
+        if (nbreDice === 1) {changePlayer1()} else { cScore2 += nbreDice; curScore2.innerText = cScore2}}
+    else {alert(`Pour commencer une nouvelle partie, veuillez appuyer sur le bouton "Nouveau jeu"`)}
 }
 
 function imgDice(n) {
@@ -100,17 +109,21 @@ function addScore() {
         score1.innerText = pScore1 ;
         winGame1(pScore1);
     }
-    else { 
+    else if (player2.getAttribute('class')==='player col active') { 
         pScore2 += cScore2 ;
         score2.innerText = pScore2 ;
         changePlayer1();
         winGame2(pScore2);
     }
+    else {alert(`Pour commencer une nouvelle partie, veuillez appuyer sur le bouton "Nouveau jeu"`)}
 }
 
 function winGame1(n) {
     if (n>=100) { 
-        alert('Player1 gagne');
+        alert(` Bravo ${nameJ1.value}, tu as enregistré ${n} points.
+        
+        Tu as gagné la partie !`
+        );
         newGame();
     } else {
         changePlayer2()
@@ -119,7 +132,9 @@ function winGame1(n) {
 
 function winGame2(n) {
     if (n>=100) {
-        alert('Player2 gagne');
+        alert(` Bravo ${nameJ2.value}, tu as enregistré ${n} points.
+        
+        Tu as gagné la partie !`);
         newGame();
     } else {
         changePlayer1()

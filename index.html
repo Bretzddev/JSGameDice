@@ -13,7 +13,7 @@
     <header class="container-sm"> 
         <div class="row">
             <div class="col-9"><h1>Jeu de dés pour 2 joueurs</h1></div>
-            <div class="col-3"><button onclick="regles()" type="button"> Règles du jeu </button> </div>
+            <div class="col-3"><button onclick="regles()" type="button" class="rulesbtn"> Règles du jeu </button> </div>
         </div> 
     </header>
     <main class="container-sm">
@@ -26,7 +26,7 @@
                     </form>
                 </div>
                 <h2 id="nom1"> Joueur1 </h2>
-            <div id="ligne1" class="row-cols-1" >
+            <div id="ligne1" class="scoreplayer" >
                 <div class="score">
                     <p id="score1" class="score"> 0 </p>
                 </div>
@@ -44,7 +44,7 @@
                     </form>
                 </div>
                 <h2 id="nom2"> Joueur2 </h2>
-                <div id="ligne2" class="row-cols-1" >
+                <div id="ligne2" class="scoreplayer" >
                     <div class="score">
                         <p id="score2" class="score"> 0 </p>
                     </div>
@@ -54,16 +54,16 @@
                     </div>
                 </div>  
             </div>
-            <div class="cmdh vh-100" >
-                <div> <button class="overbtn" onclick="newGame()" type="button"> <img src="Images/plus.png" width="30" height="30"> <br> Nouveau Jeu </button> </div>
+            <div class="cmd" >
+                <div> <button class="overbtn" onclick="newGame()" type="button"> <img src="Images/plus.png" alt="plus" class="imgmenu"> <br> Nouveau Jeu </button> </div>
                 <div> <img id="imgDe" alt="dé" src="Images/dice1.png" class="affde">  </img> </div>
-                <div> <button class="overbtn" onclick="rollDice()" type="button"> <img src="Images/refresh.png" width="30" height="30"> <br> Lancer le dé </button> </div>
-                <div> <button class="overbtn" onclick="addScore()" type="button"> <img src="Images/down.png" width="30" height="30"> <br> Ajouter au score </button> </div>
+                <div> <button class="overbtn" onclick="rollDice()" type="button"> <img src="Images/refresh.png" alt="flèches" class="imgmenu"> <br> Lancer le dé </button> </div>
+                <div> <button class="overbtn" onclick="addScore()" type="button"> <img src="Images/down.png" alt="bas" class="imgmenu"> <br> Ajouter au score </button> </div>
             </div>
         </div>
     </main>
     <footer class="container-sm">
-
+        <p> 2023 Bretzdev , Tous droits réservés </p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="script.js"></script>

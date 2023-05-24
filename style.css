@@ -4,7 +4,7 @@ body{
 
 header {
     height: 5vh;
-    background-color: khaki;
+    background-color: lightcoral;
 }
 
 form {
@@ -12,18 +12,26 @@ form {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 25px;
+}
+
+.rulesbtn {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    align-self: center;
+    margin-top: 2px;
 }
 
 h2 {
-    padding: 30px;
+    padding: 10px;
     font-size: 40px;
     color: brown;
 }
 
 footer {
     height: 5vh;
-    background-color: khaki;
+    background-color: lightcoral;
 }
 
 input {
@@ -49,7 +57,7 @@ input {
 
 .score{
     font-size: 96px;
-    margin-top: 20px;
+    margin-top: 10px;
     color: brown;
 }
 
@@ -61,7 +69,7 @@ input {
     width: 175px;
     height: 150px;
     background-color: brown;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     font-size: 18px;
@@ -77,8 +85,9 @@ input {
     height: 125px;
 }
 
-.cmdh {
+.cmd {
     position: absolute;
+    height: 100vh;
     display: grid;
     align-content: space-evenly;
     background-color:transparent;
@@ -87,22 +96,61 @@ input {
     transform: translate(-50%, -46%);
 }
 
-.cmdw {
-    position: absolute;
-    background-color:beige;
-    justify-content: center;
-    top: 50%; left: 50%;
-    transform: translate(-43%, -50%);
-}
-
 .overbtn {
     background-color: silver;
     border: 3px solid;
-    border-color: brown;
+    border-color: lightcoral;
     margin-left: 25px;
     margin-right: 25px;
     width: 120px;
     height: 85px;
 }
 
+.imgmenu{
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .cmd {position: absolute;
+        width: 80vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: transparent;
+        justify-content: space-evenly;
+        align-items: center;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .overbtn {
+        width: 80px;
+        height: 60px;
+        background-color: silver;
+        font-size: 10px;
+        border: 3px solid;
+        border-color: lightcoral;
+    }
+
+    .affde {
+        width: 90px;
+        height: 90px;
+    }
+
+    .imgmenu{
+        width: 20px;
+        height: 20px;
+    }
+
+    .scoreplayer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mainh {
+        height: 90vh;
+        align-content: space-between;
+        background-color: silver;
+    }
+}
 
