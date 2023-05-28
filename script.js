@@ -42,7 +42,18 @@ function name2() {
 
 nameJ1.addEventListener('blur', () => {nomJ1.innerText = nameJ1.value})
 nameJ2.addEventListener('blur', () => {nomJ2.innerText = nameJ2.value})
-
+nameJ1.addEventListener('keydown', (e) => {
+    if(e.code == "Enter") {
+        nomJ1.innerText = nameJ1.value;
+        e.preventDefault();
+    }
+    })
+nameJ2.addEventListener('keydown', (e) => {
+    if(e.code == "Enter") {
+        nomJ2.innerText = nameJ2.value;
+        e.preventDefault();
+    }
+    })
 
 function newGame() {
     let nbreActivePlayer = (Math.floor(Math.random() * 2)) +1 ;
