@@ -1,8 +1,16 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('/Font/Lato/Lato-Regular.ttf');
+}
+
+
 body{
     background-color: cornsilk; 
+    font-family: 'Lato', sans-serif;
 }
 
 header {
+    font-family: 'Lato', sans-serif;
     height: 5vh;
     background-color: lightcoral;
 }
@@ -30,8 +38,14 @@ h2 {
 }
 
 footer {
+    font-family: 'Lato', sans-serif;
     height: 5vh;
     background-color: lightcoral;
+    text-align: center;
+}
+
+.footer{
+   padding: 5px;
 }
 
 input {
