@@ -3,24 +3,58 @@
     src: url('/Font/Lato/Lato-Regular.ttf');
 }
 
-
 body{
     background-color: cornsilk; 
     font-family: 'Lato', sans-serif;
 }
 
 header {
-    font-family: 'Lato', sans-serif;
-    height: 5vh;
+    height: 34px;
     background-color: lightcoral;
 }
 
-form {
-    margin-top: 20px;
+.ligne{
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    text-align: center;
 }
 
 h1 {
-    font-size: 25px;
+    font-size: 20px;
+    margin-top: 3px;
+}
+
+main {
+    background-color: silver;
+}
+
+.maindisplay {
+    display: grid;
+    grid-template-columns: 5fr 2fr 5fr;
+}
+
+.player {
+    text-align: center;
+    border: 20px solid;
+    border-color: silver;
+}
+
+.cmd {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: silver;
+    text-align: center;
+    align-content: space-evenly;
+}
+
+.active {
+    border: 20px solid;
+    border-color: brown;
+    
+}
+
+input {
+    width : 150px
 }
 
 .rulesbtn {
@@ -35,38 +69,6 @@ h2 {
     padding: 10px;
     font-size: 40px;
     color: brown;
-}
-
-footer {
-    font-family: 'Lato', sans-serif;
-    height: 5vh;
-    background-color: lightcoral;
-    text-align: center;
-}
-
-.footer{
-   padding: 5px;
-}
-
-input {
-    width : 150px
-}
-
-.mainh {
-    height: 90vh;
-}
-
-.player {
-    background-color:silver;
-    text-align: center;
-    border: 20px solid;
-    border-color: silver;
-}
-
-.active {
-    border: 20px solid;
-    border-color: brown;
-    
 }
 
 .score{
@@ -95,28 +97,15 @@ input {
 }
 
 .affde {
-    width: 125px;
-    height: 125px;
-}
-
-.cmd {
-    position: absolute;
-    height: 100vh;
-    display: grid;
-    align-content: space-evenly;
-    background-color:transparent;
-    text-align: center;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -46%);
+    width: 100px;
+    height: 100px;
 }
 
 .overbtn {
     background-color: silver;
     border: 3px solid;
     border-color: lightcoral;
-    margin-left: 25px;
-    margin-right: 25px;
-    width: 120px;
+    width: 100px;
     height: 85px;
 }
 
@@ -125,16 +114,64 @@ input {
     height: 30px;
 }
 
-@media screen and (max-width: 768px) {
-    .cmd {position: absolute;
-        width: 80vw;
+footer {
+    font-family: 'Lato', sans-serif;
+    height: 25px;
+    background-color: lightcoral;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+
+
+@media screen and (max-width: 576px) {
+    .maindisplay {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5fr 2fr 5fr;
+    }
+
+    .cmd {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        background-color: transparent;
+        background-color: silver;
         justify-content: space-evenly;
+        align-self: center;
         align-items: center;
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
+        height: 90px;
+    }
+
+    h2 {
+        padding-top: 5px;
+        font-size: 28px;
+        color: brown;
+    }
+
+    .scoreplayer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .score{
+        font-size: 60px;
+        margin-top: 5px;
+        color: brown;
+    }
+
+    .curScore{
+        font-size: 30px;
+    }
+    
+    .currentScore{
+        width: 175px;
+        height: 90px;
+        background-color: brown;
+        margin-top: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 15px;
+        padding-top: 5px;
     }
 
     .overbtn {
@@ -154,17 +191,6 @@ input {
     .imgmenu{
         width: 20px;
         height: 20px;
-    }
-
-    .scoreplayer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .mainh {
-        height: 90vh;
-        align-content: space-between;
-        background-color: silver;
     }
 }
 

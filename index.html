@@ -11,14 +11,14 @@
 </head>
 <body>
     <header class="container-sm"> 
-        <div class="row">
-            <div class="col-9"><h1>Jeu de dés pour 2 joueurs</h1></div>
-            <div class="col-3"><button onclick="regles()" type="button" class="rulesbtn"> Règles du jeu </button> </div>
+        <div class="ligne">
+            <div><h1>Jeu de dés pour 2 joueurs</h1></div>
+            <div><button onclick="regles()" type="button" class="rulesbtn"> Règles du jeu </button> </div>
         </div> 
     </header>
     <main class="container-sm">
-        <div class="row row-cols-1 row-cols-md-2 mainh">
-            <div id="player1" class="player col">
+        <div class="maindisplay">
+            <div id="player1" class="player">
                 <div class="row">
                     <form id="formName1" name="pn1" action="">
                         <input id="name1" name="pn1" type="text" placeholder="Votre prénom" >
@@ -36,7 +36,13 @@
                 </div>
             </div>  
             </div>
-            <div id="player2" class="player col">
+            <div class="cmd" >
+                <div> <button class="overbtn" onclick="newGame()" type="button"> <img src="Images/plus.png" alt="plus" class="imgmenu"> <br> Nouveau Jeu </button> </div>
+                <div> <img id="imgDe" alt="dé" src="Images/dice1.png" class="affde">  </img> </div>
+                <div> <button class="overbtn" onclick="rollDice()" type="button"> <img src="Images/refresh.png" alt="flèches" class="imgmenu"> <br> Lancer le dé </button> </div>
+                <div> <button class="overbtn" onclick="addScore()" type="button"> <img src="Images/down.png" alt="bas" class="imgmenu"> <br> Ajouter au score </button> </div>
+            </div>
+            <div id="player2" class="player">
                 <div class="row">
                     <form id="formName2" name="name2" action="" >
                         <input id="name2" name="pn2" type="text" placeholder="Votre prénom" onkeypress="">
@@ -54,16 +60,10 @@
                     </div>
                 </div>  
             </div>
-            <div class="cmd" >
-                <div> <button class="overbtn" onclick="newGame()" type="button"> <img src="Images/plus.png" alt="plus" class="imgmenu"> <br> Nouveau Jeu </button> </div>
-                <div> <img id="imgDe" alt="dé" src="Images/dice1.png" class="affde">  </img> </div>
-                <div> <button class="overbtn" onclick="rollDice()" type="button"> <img src="Images/refresh.png" alt="flèches" class="imgmenu"> <br> Lancer le dé </button> </div>
-                <div> <button class="overbtn" onclick="addScore()" type="button"> <img src="Images/down.png" alt="bas" class="imgmenu"> <br> Ajouter au score </button> </div>
-            </div>
         </div>
     </main>
     <footer class="container-sm">
-        <div class="footer">
+        <div>
             <p> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
                 <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
               </svg> 2023 Bretzdev. Tous droits réservés</p>
